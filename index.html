@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CleCreatives – Ma. Cleo Ceño | Copywriter & Content Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green-dark: #1a3a2a;
+  --green-mid: #2d5a3d;
+  --green-accent: #4a8c5c;
+  --green-light: #7db88a;
+  --green-pale: #e8f2eb;
+  --cream: #f7f5f0;
+  --text: #1c1c1c;
+  --muted: #56695e;
+  --white: #fff;
+  --border: #ddeae0;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Outfit', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+/* ── NAV ── */
+nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 4rem; border-bottom: 1px solid var(--border);
+  background: var(--white); position: sticky; top: 0; z-index: 99;
+}
+.logo { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
+.logo-mark {
+  width: 42px; height: 42px; background: var(--green-dark); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 1rem; font-weight: 700; font-family: 'Playfair Display', serif;
+  letter-spacing: -.05em;
+}
+.logo-name { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--green-dark); font-weight: 700; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--text); font-size: .9rem; font-weight: 500; transition: color .2s; }
+.nav-links a:hover { color: var(--green-accent); }
+.nav-cta {
+  background: var(--green-dark); color: white; padding: .6rem 1.6rem;
+  border-radius: 8px; text-decoration: none; font-weight: 600; font-size: .9rem;
+  transition: background .2s;
+}
+.nav-cta:hover { background: var(--green-mid); }
+
+/* ── HERO ── */
+.hero {
+  background: var(--cream);
+  padding: 5rem 4rem 4rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  min-height: 85vh;
+}
+.hero-eyebrow { color: var(--green-accent); font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 1rem; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: 1.13; margin-bottom: 1.2rem; color: var(--green-dark); }
+.hero h1 em { color: var(--green-accent); font-style: italic; }
+.hero-desc { color: var(--muted); font-size: 1rem; line-height: 1.8; max-width: 460px; margin-bottom: 2rem; }
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary { background: var(--green-dark); color: white; padding: .75rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: .92rem; transition: background .2s; }
+.btn-primary:hover { background: var(--green-mid); }
+.btn-ghost { border: 1.5px solid var(--green-dark); color: var(--green-dark); padding: .75rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: .92rem; transition: all .2s; }
+.btn-ghost:hover { background: var(--green-dark); color: white; }
+.hero-img-wrap { position: relative; display: flex; justify-content: center; }
+.hero-profile-img {
+  width: 360px; height: 360px; border-radius: 50%; object-fit: cover;
+  border: 6px solid var(--green-pale);
+  box-shadow: 0 24px 60px rgba(26,58,42,.18);
+}
+.hero-badge {
+  position: absolute; bottom: 20px; right: 20px;
+  background: var(--green-dark); color: white;
+  padding: .9rem 1.2rem; border-radius: 12px; font-size: .78rem; font-weight: 600; text-align: center;
+  line-height: 1.4; box-shadow: 0 8px 20px rgba(26,58,42,.25);
+}
+.hero-badge span { display: block; font-size: 1.3rem; font-weight: 700; color: var(--green-light); }
+
+/* ── TRUST BAR ── */
+.trust-bar {
+  background: var(--green-dark); padding: 1.8rem 4rem;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;
+}
+.trust-item { color: white; }
+.trust-item strong { display: block; font-size: 1.3rem; font-family: 'Playfair Display', serif; color: var(--green-light); }
+.trust-item span { font-size: .82rem; opacity: .8; }
+
+/* ── SECTIONS ── */
+.sec { padding: 5rem 4rem; }
+.sec-alt { background: var(--cream); }
+.sec-center { text-align: center; }
+.sec-eyebrow { color: var(--green-accent); font-size: .76rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .7rem; }
+.sec-title { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 2.8vw, 2.3rem); margin-bottom: .7rem; color: var(--green-dark); }
+.sec-desc { color: var(--muted); font-size: .95rem; line-height: 1.75; max-width: 600px; margin: 0 auto 3rem; }
+
+/* ── ABOUT ── */
+.about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 4rem; align-items: start; }
+.about-aside { position: sticky; top: 100px; }
+.about-card {
+  background: var(--green-dark); border-radius: 16px; padding: 2rem;
+  color: white; text-align: center;
+}
+.about-card-name { font-family: 'Playfair Display', serif; font-size: 1.25rem; margin-bottom: .3rem; }
+.about-card-title { color: var(--green-light); font-size: .85rem; margin-bottom: 1.5rem; }
+.about-tags { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-bottom: 1.5rem; }
+.about-tag { background: rgba(255,255,255,.12); color: white; padding: .3rem .75rem; border-radius: 20px; font-size: .75rem; font-weight: 500; }
+.about-contact-btn {
+  display: block; background: var(--green-accent); color: white;
+  padding: .7rem 1.5rem; border-radius: 8px; text-decoration: none;
+  font-weight: 600; font-size: .88rem; transition: background .2s;
+}
+.about-contact-btn:hover { background: var(--green-light); }
+
+.about-content h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--green-dark); margin: 2rem 0 .6rem; padding-bottom: .4rem; border-bottom: 2px solid var(--green-pale); }
+.about-content h3:first-child { margin-top: 0; }
+.about-content p { color: var(--muted); font-size: .95rem; line-height: 1.8; margin-bottom: .8rem; }
+.about-content ul { list-style: none; padding: 0; }
+.about-content ul li { color: var(--muted); font-size: .95rem; padding: .3rem 0 .3rem 1.2rem; position: relative; }
+.about-content ul li::before { content: '🌿'; position: absolute; left: 0; font-size: .7rem; top: .45rem; }
+
+.cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin-top: .5rem; }
+.cert-badge {
+  background: var(--green-pale); border: 1px solid var(--border);
+  border-radius: 8px; padding: .7rem 1rem; font-size: .82rem; font-weight: 600;
+  color: var(--green-dark); display: flex; align-items: center; gap: .5rem;
+}
+.cert-badge::before { content: '✓'; color: var(--green-accent); font-weight: 700; }
+
+/* ── COPYWRITING PORTFOLIO ── */
+.portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+.portfolio-card {
+  border-radius: 14px; overflow: hidden;
+  border: 1px solid var(--border); background: white;
+  transition: transform .25s, box-shadow .25s;
+}
+.portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(26,58,42,.12); }
+.portfolio-card-img { width: 100%; height: 260px; object-fit: cover; display: block; }
+.portfolio-card-body { padding: 1.5rem; }
+.portfolio-card-tag {
+  display: inline-block; background: var(--green-pale); color: var(--green-accent);
+  font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  padding: .25rem .7rem; border-radius: 20px; margin-bottom: .8rem;
+}
+.portfolio-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--green-dark); margin-bottom: .5rem; line-height: 1.3; }
+.portfolio-card p { color: var(--muted); font-size: .88rem; line-height: 1.7; }
+
+/* Ad mockup card - full width */
+.portfolio-card-wide { grid-column: 1 / -1; }
+.portfolio-card-wide .portfolio-card-img { height: 400px; object-fit: contain; background: #f8f8f8; padding: 1rem; }
+
+/* ── BLOG ── */
+.blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+.blog-card {
+  border-radius: 14px; overflow: hidden; border: 1px solid var(--border);
+  background: white; transition: transform .25s, box-shadow .25s;
+}
+.blog-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(26,58,42,.12); }
+.blog-card-header { background: var(--green-dark); padding: 2rem; position: relative; overflow: hidden; }
+.blog-card-header::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, rgba(74,140,92,.4), transparent 60%);
+}
+.blog-card-cat { position: relative; color: var(--green-light); font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .5rem; }
+.blog-card-title { position: relative; font-family: 'Playfair Display', serif; font-size: 1.2rem; color: white; line-height: 1.3; }
+.blog-card-body { padding: 1.5rem; }
+.blog-card-excerpt { color: var(--muted); font-size: .9rem; line-height: 1.75; margin-bottom: 1.2rem; }
+.blog-card-meta { display: flex; gap: 1rem; align-items: center; font-size: .8rem; color: var(--muted); }
+.blog-card-meta span { display: flex; align-items: center; gap: .3rem; }
+
+/* Blog article content */
+.blog-article-sections { margin-top: 1rem; }
+.blog-section { margin-bottom: 1.2rem; }
+.blog-section h4 { font-family: 'Playfair Display', serif; font-size: .95rem; color: var(--green-dark); margin-bottom: .4rem; }
+.blog-section p { color: var(--muted); font-size: .87rem; line-height: 1.7; }
+.blog-section ul { list-style: none; padding: 0; }
+.blog-section ul li { color: var(--muted); font-size: .87rem; padding: .2rem 0 .2rem 1rem; position: relative; }
+.blog-section ul li::before { content: '–'; position: absolute; left: 0; color: var(--green-accent); }
+
+/* ── CTA BANNER ── */
+.cta-banner {
+  background: var(--green-dark); padding: 4rem; text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-banner::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(74,140,92,.3), transparent 65%);
+}
+.cta-banner h2 { position: relative; font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); color: white; margin-bottom: .8rem; }
+.cta-banner p { position: relative; color: rgba(255,255,255,.7); max-width: 500px; margin: 0 auto 2rem; font-size: .97rem; line-height: 1.7; }
+.cta-banner .btn-light { position: relative; background: white; color: var(--green-dark); padding: .85rem 2.2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: .95rem; transition: background .2s; display: inline-block; }
+.cta-banner .btn-light:hover { background: var(--green-pale); }
+.cta-email { position: relative; margin-top: 1rem; color: rgba(255,255,255,.55); font-size: .85rem; }
+.cta-email a { color: var(--green-light); text-decoration: none; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--text); color: rgba(255,255,255,.6);
+  padding: 2rem 4rem; display: flex; align-items: center; justify-content: space-between;
+  font-size: .85rem;
+}
+footer .logo-name { color: white; }
+footer a { color: rgba(255,255,255,.6); text-decoration: none; }
+footer a:hover { color: white; }
+
+/* ── SERVICES ── */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.service-card {
+  background: white; border: 1px solid var(--border); border-radius: 14px;
+  padding: 2rem; transition: transform .25s, box-shadow .25s;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,58,42,.1); }
+.service-icon { font-size: 2rem; margin-bottom: 1rem; }
+.service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--green-dark); margin-bottom: .5rem; }
+.service-card p { color: var(--muted); font-size: .9rem; line-height: 1.7; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem; gap: 2rem; text-align: center; min-height: auto; }
+  .hero-desc { max-width: 100%; }
+  .hero-btns { justify-content: center; }
+  .hero-profile-img { width: 260px; height: 260px; }
+  .hero-badge { right: 0; }
+  .trust-bar { grid-template-columns: repeat(2, 1fr); padding: 1.5rem; }
+  .sec { padding: 3rem 1.5rem; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-aside { position: static; }
+  .cert-grid { grid-template-columns: 1fr; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .portfolio-card-wide { grid-column: auto; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-mark">Cc</div>
+    <span class="logo-name">CleCreatives</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#copywriting">Copywriting</a></li>
+    <li><a href="#blog">Blog Writing</a></li>
+  </ul>
+  <a href="mailto:macleoceno@gmail.com" class="nav-cta">Get in Touch</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Environmental Copywriter & Content Strategist</p>
+    <h1>Words That Work.<br><em>Planet That Thanks You.</em></h1>
+    <p class="hero-desc">I help eco-conscious brands communicate their values through clear, engaging, and research-based content — from ad copy to sustainability blog articles.</p>
+    <div class="hero-btns">
+      <a href="#copywriting" class="btn-primary">View My Work →</a>
+      <a href="mailto:macleoceno@gmail.com" class="btn-ghost">Let's Collaborate</a>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <!-- Replace the src below with your actual photo URL or a local file -->
+    <img src="https://clecreatives.wordpress.com/wp-content/uploads/2026/03/file_00000000a95072069fa9b6349a618520.png" alt="Ma. Cleo Ceño – CleCreatives" class="hero-profile-img">
+    <div class="hero-badge">
+      Magna Cum Laude<br>
+      <span>BS Env. Sci.</span>
+      Visayas State University
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><strong>TESDA NC III</strong><span>Bookkeeping</span></div>
+  <div class="trust-item"><strong>Xero Certified</strong><span>Professional</span></div>
+  <div class="trust-item"><strong>HubSpot</strong><span>Content Marketing Certified</span></div>
+  <div class="trust-item"><strong>Brevo</strong><span>Email Marketing Certified</span></div>
+</div>
+
+<!-- ABOUT -->
+<section class="sec sec-alt" id="about">
+  <div class="sec-center" style="margin-bottom: 3rem;">
+    <p class="sec-eyebrow">About Me</p>
+    <h2 class="sec-title">Hi, I'm Ma. Cleo Ceño</h2>
+    <p class="sec-desc">The person behind CleCreatives — where environmental science meets purposeful writing and precise bookkeeping.</p>
+  </div>
+  <div class="about-grid">
+    <div class="about-aside">
+      <div class="about-card">
+        <div class="about-card-name">Ma. Cleo Ceño</div>
+        <div class="about-card-title">Copywriter · Content Writer · Bookkeeper</div>
+        <div class="about-tags">
+          <span class="about-tag">Sustainability</span>
+          <span class="about-tag">Eco-Brands</span>
+          <span class="about-tag">Copywriting</span>
+          <span class="about-tag">Bookkeeping</span>
+          <span class="about-tag">Xero</span>
+          <span class="about-tag">TESDA NC III</span>
+        </div>
+        <a href="mailto:macleoceno@gmail.com" class="about-contact-btn">macleoceno@gmail.com</a>
+      </div>
+      <div style="margin-top: 1.5rem;">
+        <div class="cert-grid">
+          <div class="cert-badge">TESDA Bookkeeping NC III</div>
+          <div class="cert-badge">Xero Certified Professional</div>
+          <div class="cert-badge">HubSpot Content Marketing</div>
+          <div class="cert-badge">Brevo Email Marketing</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-content">
+      <h3>Environmental Background</h3>
+      <p>I graduated Magna Cum Laude from Visayas State University with a Bachelor of Science in Environmental Science. My background introduced me to field monitoring, data collection, and technical documentation — training me to pay careful attention to detail and treat environmental information responsibly.</p>
+      <p>After graduating, I spent two years working in environmental monitoring within the aquaculture sector — observing conditions, recording data, and helping organize monitoring records used for environmental reporting. I also participated in coastal clean-up initiatives, which made environmental work feel tangible and connected to the communities around these ecosystems.</p>
+
+      <h3>Writing & Copywriting</h3>
+      <p>Over time, I became interested in communicating environmental topics through writing. Many environmental issues are important but explained in ways that are difficult for people to understand. That curiosity led me to explore content writing and copywriting, especially for sustainability-related topics.</p>
+      <p>My work includes:</p>
+      <ul>
+        <li>Facebook & Instagram ad copy for eco-friendly and workspace products</li>
+        <li>Email marketing content and campaigns</li>
+        <li>Blog articles about sustainability and environmental issues</li>
+        <li>Eco-product descriptions and brand storytelling</li>
+        <li>Content related to environmental awareness and green innovation</li>
+      </ul>
+
+      <h3>Bookkeeping & Financial Records</h3>
+      <p>I am a <strong>TESDA Bookkeeping NC III holder</strong> and a <strong>Xero Certified Professional</strong>. My bookkeeping training covers the full manual accounting cycle — journal entries, ledger posting, financial statement preparation, adjusting and closing entries, and post-closing trial balance.</p>
+      <p>Understanding bookkeeping manually first means I understand the logic behind every entry, not just the process. For digital work, I use Excel, Google Sheets, and Xero for recording and organizing financial data.</p>
+
+      <h3>Certifications & Learning</h3>
+      <ul>
+        <li>TESDA Bookkeeping NC III</li>
+        <li>Xero Certified Professional</li>
+        <li>HubSpot Content Marketing Certification</li>
+        <li>Brevo Email Marketing Certification</li>
+        <li>Currently taking: Climate Information Services online course</li>
+      </ul>
+
+      <h3>Open to Collaboration</h3>
+      <p>I'm currently open to freelance projects in environmental content writing, sustainability copywriting, research support, and bookkeeping assistance. If you're an eco-conscious brand or a small business needing organized, accurate financial records, I'd be glad to collaborate.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="sec-center">
+    <p class="sec-eyebrow">What I Offer</p>
+    <h2 class="sec-title">Services</h2>
+    <p class="sec-desc">From compelling ad copy to accurate financial records — I bring the same precision and care to everything I do.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">✍️</div>
+      <h3>Copywriting & Ad Copy</h3>
+      <p>Facebook and Instagram ads, email marketing campaigns, and product storytelling designed to convert — especially for eco-friendly and workspace brands.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🌿</div>
+      <h3>Environmental Content Writing</h3>
+      <p>Well-researched blog articles, website content, and sustainability communications that are clear, accurate, and engaging for eco-conscious audiences.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📊</div>
+      <h3>Bookkeeping & Financial Records</h3>
+      <p>Full-cycle bookkeeping using Xero, Excel, and Google Sheets. TESDA NC III certified with expertise in journal entries, ledger posting, and financial statement preparation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COPYWRITING PORTFOLIO -->
+<section class="sec sec-alt" id="copywriting">
+  <div class="sec-center">
+    <p class="sec-eyebrow">Copywriting Portfolio</p>
+    <h2 class="sec-title">Ad & Email Copy Samples</h2>
+    <p class="sec-desc">Facebook/Instagram ads and email marketing copy created for CleCreatives — a sustainable workspace brand.</p>
+  </div>
+
+  <div class="portfolio-grid">
+
+    <!-- Ad Mockups -->
+    <div class="portfolio-card portfolio-card-wide">
+      <img src="https://clecreatives.wordpress.com/wp-content/uploads/2026/03/file_00000000a95072069fa9b6349a618520.png"
+        alt="CleCreatives Ad Mockups – Ergonomic Chair, Eco-Cleaning Supplies, Standing Desk, Email"
+        class="portfolio-card-img"
+        onerror="this.style.display='none'">
+      <div class="portfolio-card-body">
+        <span class="portfolio-card-tag">Facebook / Instagram Ads + Email Copy</span>
+        <h3>CleCreatives — Full Campaign Mockups</h3>
+        <p>A complete set of ad creatives and email marketing content for a sustainable workspace brand. Includes copy for ergonomic chairs, standing desks, eco-friendly cleaning supplies, and a promotional email campaign — each tailored to highlight product benefits and sustainability values.</p>
+      </div>
+    </div>
+
+    <!-- Ergonomic Chair -->
+    <div class="portfolio-card">
+      <img src="https://clecreatives.wordpress.com/wp-content/uploads/2026/03/2621.png"
+        alt="Ergonomic Chair"
+        class="portfolio-card-img"
+        onerror="this.style.background:'#e8f2eb'; this.style.height='200px'">
+      <div class="portfolio-card-body">
+        <span class="portfolio-card-tag">Facebook / Instagram Ad</span>
+        <h3>Ergonomic Chair — "Comfort That Works as Hard as You Do."</h3>
+        <p>Ad copy focused on posture, all-day comfort, and wellness at work. Features benefit-driven bullet points (Adjustable Lumbar Support, Breathable Mesh Design, Built for All-Day Comfort) with a strong CTA: <em>"Upgrade Your Workspace."</em></p>
+      </div>
+    </div>
+
+    <!-- Eco Cleaning -->
+    <div class="portfolio-card">
+      <img src="https://clecreatives.wordpress.com/wp-content/uploads/2026/03/2371-2.png"
+        alt="Eco-Friendly Cleaning Supplies"
+        class="portfolio-card-img"
+        onerror="this.style.background:'#e8f2eb'; this.style.height='200px'">
+      <div class="portfolio-card-body">
+        <span class="portfolio-card-tag">Facebook / Instagram Ad</span>
+        <h3>Eco-Friendly Cleaning — "Clean Space. Clean Planet."</h3>
+        <p>Sustainability-forward copy highlighting plant-based ingredients, non-toxic formulas, and environmental responsibility. A badge element ("Good for Your Space, Better for Our Planet") reinforces the brand's eco mission. CTA: <em>"Make the Switch Today."</em></p>
+      </div>
+    </div>
+
+    <!-- Standing Desk -->
+    <div class="portfolio-card">
+      <img src="" alt="Standing Desk Ad"
+        class="portfolio-card-img"
+        style="background: linear-gradient(135deg, #e8f2eb 0%, #c8dece 100%); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:1.1rem; color:#1a3a2a; text-align:center; padding: 2rem;"
+        onerror="this.alt='Standing Desk'">
+      <div class="portfolio-card-body">
+        <span class="portfolio-card-tag">Facebook / Instagram Ad</span>
+        <h3>Standing Desk — "Work Your Way. Every Day."</h3>
+        <p>Energy and productivity-focused copy for a height-adjustable standing desk. Key benefits: Smooth Height Adjustment, Boosts Energy & Focus, Built Strong. Built to Last. CTA: <em>"Elevate Your Workspace."</em></p>
+      </div>
+    </div>
+
+    <!-- Email Marketing -->
+    <div class="portfolio-card">
+      <div class="portfolio-card-body" style="padding-top: 2rem;">
+        <span class="portfolio-card-tag">Email Marketing Copy</span>
+        <h3>"Let's Build a Better Workspace—Together."</h3>
+        <p>A product newsletter showcasing all four CleCreatives product lines with warm, value-driven copy. Opens with a personalized greeting, explains the brand's mission, and ends with a sustainability commitment message that reinforces long-term brand trust.</p>
+        <div class="blog-article-sections" style="margin-top:1.2rem;">
+          <div class="blog-section">
+            <h4>Subject line approach</h4>
+            <p>Conversational and community-driven — speaks to "building together" rather than selling.</p>
+          </div>
+          <div class="blog-section">
+            <h4>Key copy elements</h4>
+            <ul>
+              <li>Personalized {First Name} opener</li>
+              <li>Brand mission statement</li>
+              <li>Four product feature blocks with individual CTAs</li>
+              <li>Sustainability footer pledge</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BLOG PORTFOLIO -->
+<section class="sec" id="blog">
+  <div class="sec-center">
+    <p class="sec-eyebrow">Blog Writing Portfolio</p>
+    <h2 class="sec-title">Research-Based Articles</h2>
+    <p class="sec-desc">Long-form sustainability content that breaks down complex environmental topics into clear, engaging reads.</p>
+  </div>
+  <div class="blog-grid">
+
+    <!-- Article 1 -->
+    <div class="blog-card">
+      <div class="blog-card-header">
+        <p class="blog-card-cat">Consumer Education · Sustainability</p>
+        <h3 class="blog-card-title">How to Tell If a Brand Is Truly Sustainable (Before You Buy)</h3>
+      </div>
+      <div class="blog-card-body">
+        <p class="blog-card-excerpt">Sustainability has become one of the most powerful marketing terms today. As brands increasingly claim to be "eco-friendly," greenwashing has become a growing concern — even flagged by United Nations bodies. This article gives readers practical tools to separate genuine sustainability from clever branding.</p>
+        <div class="blog-article-sections">
+          <div class="blog-section">
+            <h4>Look for Specific, Verifiable Details</h4>
+            <p>Vague language is a red flag. Truly sustainable brands go beyond slogans — they share exact materials, sourcing origins, carbon reduction targets, and waste management initiatives. Specificity signals accountability.</p>
+          </div>
+          <div class="blog-section">
+            <h4>Check for Recognized Certifications</h4>
+            <p>Third-party verification (FSC, Fair Trade, GOTS, USDA Organic, Energy Star) provides assurance that self-declared claims alone cannot. Legitimate brands make their certifications easy to verify.</p>
+          </div>
+          <div class="blog-section">
+            <h4>Evaluate Brand Transparency</h4>
+            <p>Does the brand publish sustainability reports? Do they set measurable goals and acknowledge challenges openly? Real accountability means admitting imperfection — not projecting perfection.</p>
+          </div>
+          <div class="blog-section">
+            <h4>Be Careful with Buzzwords</h4>
+            <p>"Biodegradable," "natural," and "non-toxic" sound reassuring but mean little without context. Biodegradable products may still end up in landfills without industrial composting facilities.</p>
+          </div>
+          <div class="blog-section">
+            <h4>Consider the Full Lifecycle</h4>
+            <p>Citing principles from the Ellen MacArthur Foundation's circular economy model — a durable product lasting years often has a lower environmental footprint than a cheaper "eco" alternative replaced repeatedly.</p>
+          </div>
+        </div>
+        <div class="blog-card-meta" style="margin-top:1rem;">
+          <span>📅 March 2026</span>
+          <span>🌿 Sustainability · Consumer Guide</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article 2 -->
+    <div class="blog-card">
+      <div class="blog-card-header">
+        <p class="blog-card-cat">Fashion Industry · Environment</p>
+        <h3 class="blog-card-title">The Rise of Sustainable Fashion: Why Eco-Friendly Products Matter</h3>
+      </div>
+      <div class="blog-card-body">
+        <p class="blog-card-excerpt">Fast fashion has made clothing affordable and endlessly available — but at a serious environmental cost. The UN Environment Programme reports the fashion industry contributes roughly 10% of global carbon emissions. This article explores what sustainable fashion actually means and why it matters.</p>
+        <div class="blog-article-sections">
+          <div class="blog-section">
+            <h4>The Real Cost of Fast Fashion</h4>
+            <p>Many garments are worn only a few times before being discarded. Multiply individual buying habits across millions of consumers, and the scale of textile waste becomes almost hard to visualize.</p>
+          </div>
+          <div class="blog-section">
+            <h4>What Makes Fashion Sustainable?</h4>
+            <p>Organic cotton, hemp, bamboo fibers, and recycled textiles are gaining ground. Organic cotton avoids synthetic pesticides, while recycled polyester repurposes plastic bottles — though both carry trade-offs worth examining honestly.</p>
+          </div>
+          <div class="blog-section">
+            <h4>The Microplastics Problem</h4>
+            <p>The IUCN identifies synthetic textiles as a significant contributor to microplastic pollution. These particles pass through wastewater filters and enter rivers and oceans, harming marine life and potentially human health.</p>
+          </div>
+          <div class="blog-section">
+            <h4>The Human Side of the Supply Chain</h4>
+            <p>Garment workers' rights matter too. Brands genuinely committed to sustainability tend to be transparent about their supply chain — those that aren't often keep things deliberately vague.</p>
+          </div>
+          <div class="blog-section">
+            <h4>Why Consumers Are Choosing Eco-Friendly Products</h4>
+            <p>Quality clothing lasts longer and can cost less over time, even at a higher upfront price. Consumer choices create incentives — when buyers reward transparency, brands have stronger reasons to improve.</p>
+          </div>
+        </div>
+        <div class="blog-card-meta" style="margin-top:1rem;">
+          <span>📅 March 2026</span>
+          <span>🌿 Fashion · Environmental Impact</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Let's Work Together</h2>
+  <p>Whether you need sustainability copy that converts, eco-brand content that educates, or bookkeeping that's accurate and organized — I'm ready to help.</p>
+  <a href="mailto:macleoceno@gmail.com" class="btn-light">Get in Touch →</a>
+  <p class="cta-email">Or email me directly at <a href="mailto:macleoceno@gmail.com">macleoceno@gmail.com</a></p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="logo">
+    <div class="logo-mark" style="width:32px;height:32px;font-size:.85rem;">Cc</div>
+    <span class="logo-name">CleCreatives</span>
+  </a>
+  <span>© 2026 CleCreatives · Ma. Cleo Ceño · Available for freelance</span>
+  <a href="mailto:macleoceno@gmail.com">macleoceno@gmail.com</a>
+</footer>
+
+</body>
+</html>

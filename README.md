@@ -1,4 +1,4 @@
-## Hi there 👋
+Portfolio website of Ma. Cleo Ceño — Environmental Copywriter & Bookkeeper based in Bohol, Philippines.
 
 <!--
 **clecreatives/CleCreatives** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

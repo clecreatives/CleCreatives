@@ -1,4 +1,4 @@
-Portfolio website of Ma. Cleo Ceño — Environmental Copywriter & Bookkeeper based in Bohol, Philippines.
+This repository hosts the source code for CleCreatives, the freelance portfolio of Ma. Cleo Ceño. Services include sustainability copywriting, content writing, and bookkeeping support for small businesses and remote clients.
 
 <!--
 **clecreatives/CleCreatives** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

@@ -249,6 +249,53 @@ footer a:hover { color: white; }
 .tool-card-name { font-size: .82rem; font-weight: 600; color: white; margin-bottom: .15rem; }
 .tool-card-desc { font-size: .7rem; color: rgba(255,255,255,.45); line-height: 1.3; }
 
+/* ── BRAND STRIP ── */
+.brand-strip {
+  background: var(--green-pale); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 1rem 0; overflow: hidden; white-space: nowrap;
+}
+.brand-strip-inner {
+  display: inline-flex; gap: 3rem; animation: scrollstrip 22s linear infinite;
+}
+.brand-strip-inner span {
+  font-size: .82rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--green-mid); display: flex; align-items: center; gap: .6rem;
+}
+.brand-strip-inner span::before { content: '✦'; color: var(--green-accent); font-size: .6rem; }
+@keyframes scrollstrip {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── WHY WORK WITH ME ── */
+.why-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem; margin-top: 3rem;
+}
+.why-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 14px; padding: 1.75rem;
+  display: flex; gap: 1rem; align-items: flex-start;
+  transition: transform .25s, box-shadow .25s;
+}
+.why-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(26,58,42,.08); }
+.why-icon {
+  width: 42px; height: 42px; background: var(--green-pale);
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.why-icon svg { width: 20px; height: 20px; stroke: var(--green-accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.why-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--green-dark); margin-bottom: .35rem; }
+.why-card p { font-size: .88rem; color: var(--muted); line-height: 1.65; }
+
+/* ── PORTFOLIO OBJECTIVE LINE ── */
+.portfolio-objective {
+  font-size: .78rem; color: var(--green-accent); font-weight: 600;
+  letter-spacing: .03em; margin-bottom: .5rem;
+  padding: .3rem .7rem; background: var(--green-pale);
+  border-radius: 4px; display: inline-block;
+}
+
 /* ── BLOG READ LINK ── */
 .blog-read-link {
   display: inline-flex; align-items: center; gap: .45rem;
@@ -277,6 +324,7 @@ footer a:hover { color: white; }
   .portfolio-card-wide { grid-column: auto; }
   .blog-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
   footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
 }
 </style>
@@ -295,6 +343,7 @@ footer a:hover { color: white; }
     <li><a href="#tools">Tools</a></li>
     <li><a href="#copywriting">Copywriting</a></li>
     <li><a href="#blog">Blog Writing</a></li>
+    <li><a href="#why">Why Me</a></li>
   </ul>
   <a href="mailto:macleoceno@gmail.com" class="nav-cta">Get in Touch</a>
 </nav>
@@ -323,6 +372,13 @@ footer a:hover { color: white; }
   <div class="trust-item"><strong>Xero Certified</strong><span>Professional</span></div>
   <div class="trust-item"><strong>HubSpot</strong><span>Content Marketing Certified</span></div>
   <div class="trust-item"><strong>Brevo</strong><span>Email Marketing Certified</span></div>
+</div>
+
+<!-- BRAND STRIP -->
+<div class="brand-strip">
+  <div class="brand-strip-inner">
+    <span>Copywriting</span><span>Sustainability Content</span><span>Email Marketing</span><span>Ad Copy</span><span>Bookkeeping</span><span>Xero</span><span>Environmental Writing</span><span>Blog Articles</span><span>Brand Storytelling</span><span>Copywriting</span><span>Sustainability Content</span><span>Email Marketing</span><span>Ad Copy</span><span>Bookkeeping</span><span>Xero</span><span>Environmental Writing</span><span>Blog Articles</span><span>Brand Storytelling</span>
+  </div>
 </div>
 
 <!-- ABOUT -->
@@ -357,37 +413,34 @@ footer a:hover { color: white; }
       </div>
     </div>
     <div class="about-content">
-      <h3>Environmental Background</h3>
-      <p>I graduated Magna Cum Laude from Visayas State University with a Bachelor of Science in Environmental Science. My background introduced me to field monitoring, data collection, and technical documentation — training me to pay careful attention to detail and treat environmental information responsibly.</p>
-      <p>After graduating, I spent two years working in environmental monitoring within the aquaculture sector — observing conditions, recording data, and helping organize monitoring records used for environmental reporting. I also participated in coastal clean-up initiatives, which made environmental work feel tangible and connected to the communities around these ecosystems.</p>
+      <h3>What I Bring to Your Brand</h3>
+      <p>I help eco-conscious brands and small businesses communicate their values through clear, research-backed content — and keep their finances organized with accurate, reliable bookkeeping. Every project I take on gets the same thing: careful attention to detail, honest work, and writing that actually serves a purpose.</p>
+      <p>I graduated <strong>Magna Cum Laude</strong> from Visayas State University with a Bachelor of Science in Environmental Science — which means when I write about sustainability, I'm not guessing. I understand the science, the terminology, and the issues that matter to eco-conscious audiences.</p>
 
-      <h3>Writing & Copywriting</h3>
-      <p>My writing background started with humanitarian content — I have about a month of experience writing in that space. Over time, I developed an interest in sustainability and environmental topics, and I am actively building my skills and knowledge in that direction. My environmental science background gives me a strong foundation for understanding the subject matter, even as I continue to grow as a writer in this niche.</p>
-      <p>My portfolio samples include:</p>
+      <h3>Copywriting & Content</h3>
+      <p>I create content that connects — from Facebook and Instagram ad copy to email campaigns, blog articles, and product storytelling. My focus is on clarity and intention: every word should earn its place and move the reader toward action.</p>
       <ul>
-        <li>Facebook & Instagram ad copy for eco-friendly and workspace products</li>
-        <li>Email marketing content and campaigns</li>
-        <li>Blog articles about sustainability and environmental issues</li>
-        <li>Eco-product descriptions and brand storytelling</li>
+        <li>Ad copy for eco-friendly and workspace products</li>
+        <li>Email marketing campaigns</li>
+        <li>Research-based blog articles on sustainability</li>
+        <li>Product descriptions and brand storytelling</li>
       </ul>
 
       <h3>Bookkeeping & Financial Records</h3>
-      <p>I am a <strong>TESDA Bookkeeping NC III holder</strong> and a <strong>Xero Certified Professional</strong>. My bookkeeping training covers the full manual accounting cycle — journal entries, ledger posting, financial statement preparation, adjusting and closing entries, and post-closing trial balance.</p>
-      <p>Understanding bookkeeping manually first means I understand the logic behind every entry, not just the process. For digital work, I use Excel, Google Sheets, and Xero for recording and organizing financial data.</p>
+      <p>As a <strong>TESDA Bookkeeping NC III holder</strong> and <strong>Xero Certified Professional</strong>, I handle the full accounting cycle — from journal entries and ledger posting to financial statement preparation. I learned bookkeeping manually first, which means I understand the logic behind every entry, not just the software.</p>
 
-      <h3>Certifications & Learning</h3>
+      <h3>Certifications</h3>
       <ul>
         <li>TESDA Bookkeeping NC III</li>
         <li>Xero Certified Professional</li>
         <li>HubSpot Content Marketing Certification</li>
         <li>Brevo Email Marketing Certification</li>
-        <li>Working in a Gender-Diverse Environment (TESDA, March 2026)</li>
-        <li>Budgeting and Saving Module (TESDA, March 2026)</li>
-        <li>Financial Planning Module (TESDA, March 2026)</li>
+        <li>Working in a Gender-Diverse Environment (TESDA, 2026)</li>
+        <li>Budgeting, Saving & Financial Planning Modules (TESDA, 2026)</li>
       </ul>
 
-      <h3>Open to Collaboration</h3>
-      <p>I'm currently open to freelance projects in environmental content writing, sustainability copywriting, research support, and bookkeeping assistance. If you're an eco-conscious brand or a small business needing organized, accurate financial records, I'd be glad to collaborate.</p>
+      <h3>Open to Freelance Projects</h3>
+      <p>If you're an eco-conscious brand looking for content that educates and converts, or a small business that needs clean, organized financial records — I'd be glad to work with you.</p>
     </div>
   </div>
 </section>
@@ -543,6 +596,7 @@ footer a:hover { color: white; }
       <img src="chair.png" alt="Ergonomic Chair Ad" class="portfolio-card-img">
       <div class="portfolio-card-body">
         <span class="portfolio-card-tag">Facebook / Instagram Ad</span>
+        <p class="portfolio-objective">Goal: Drive conversions for an eco-friendly workspace brand</p>
         <h3>Comfort that works as hard as you do.</h3>
         <p>Ergonomic support for better posture, all-day comfort, and a healthier you.</p>
         <ul class="ad-bullets">
@@ -559,6 +613,7 @@ footer a:hover { color: white; }
       <img src="cleaning_supplies_set.png" alt="Eco-Friendly Cleaning Supplies Ad" class="portfolio-card-img">
       <div class="portfolio-card-body">
         <span class="portfolio-card-tag">Facebook / Instagram Ad</span>
+        <p class="portfolio-objective">Goal: Promote eco-friendly products to environmentally conscious buyers</p>
         <h3>Clean space. Clean planet.</h3>
         <p>Eco-friendly cleaning supplies that are safe for your team and kinder to the environment.</p>
         <ul class="ad-bullets">
@@ -575,6 +630,7 @@ footer a:hover { color: white; }
       <img src="desk.png" alt="Standing Desk Ad" class="portfolio-card-img">
       <div class="portfolio-card-body">
         <span class="portfolio-card-tag">Facebook / Instagram Ad</span>
+        <p class="portfolio-objective">Goal: Highlight product benefits to boost workplace wellness purchases</p>
         <h3>Work your way. Every day.</h3>
         <p>Height-adjustable standing desks that help you move more, feel better, and do your best work.</p>
         <ul class="ad-bullets">
@@ -591,6 +647,7 @@ footer a:hover { color: white; }
       <img src="printer.png" alt="Email Marketing Sample" class="portfolio-card-img">
       <div class="portfolio-card-body">
         <span class="portfolio-card-tag">Email Marketing Copy</span>
+        <p class="portfolio-objective">Goal: Re-engage subscribers and drive traffic to a sustainable product store</p>
         <h3>Let's build a better workspace — together.</h3>
         <p style="font-size:.82rem; color:var(--muted); margin-bottom:.5rem;">Subject: Let's build a better workspace — together.</p>
         <p>Hi {First Name},</p>
@@ -598,6 +655,42 @@ footer a:hover { color: white; }
         <p style="margin:.6rem 0;">Whether you're upgrading your chair, switching to a standing desk, going paperless with a label printer, or making the switch to non-toxic cleaning supplies — we've got everything your workspace needs to work better and do better.</p>
         <p style="margin:.6rem 0; font-style:italic; color:var(--green-dark);">Sustainability is more than a choice — it's our commitment.</p>
         <a class="ad-cta" style="margin-top:1rem;">Shop the full collection →</a>
+      </div>
+    </div>
+
+    <!-- Solar Ad -->
+    <div class="portfolio-card">
+      <div style="width:100%;height:320px;background:linear-gradient(135deg,#1a3a2a 0%,#2d5a3d 50%,#4a8c5c 100%);display:flex;align-items:center;justify-content:center;">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <span class="portfolio-card-tag">Facebook / Instagram Ad</span>
+        <p class="portfolio-objective">Goal: Drive solar inquiries from homeowners, businesses & eco-conscious consumers</p>
+        <h3>The sun is free. Your electricity bill shouldn't be this high.</h3>
+        <p>Every day the sun rises — and every day most homes let that energy go to waste. Solar power isn't just for the eco-conscious. It's for anyone tired of watching their electricity bill climb.</p>
+        <ul class="ad-bullets">
+          <li>✅ Slash your monthly electricity costs</li>
+          <li>✅ Reduce your carbon footprint</li>
+          <li>☀️ Energy that pays for itself over time</li>
+        </ul>
+        <a class="ad-cta">Get Your Free Solar Quote →</a>
+      </div>
+    </div>
+
+    <!-- Solar Email -->
+    <div class="portfolio-card">
+      <div style="width:100%;height:320px;background:linear-gradient(135deg,#2d5a3d 0%,#4a8c5c 60%,#7db88a 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:2rem;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <p style="color:rgba(255,255,255,.75);font-size:.85rem;text-align:center;font-style:italic;">"Your roof could be paying your bills — here's how"</p>
+      </div>
+      <div class="portfolio-card-body">
+        <span class="portfolio-card-tag">Email Marketing Copy</span>
+        <p class="portfolio-objective">Goal: Nurture leads and convert prospects into solar energy customers</p>
+        <h3>Your roof could be paying your bills — here's how.</h3>
+        <p>Subject: <em>Your roof could be paying your bills — here's how</em></p>
+        <p style="margin:.6rem 0;">What if your biggest monthly expense could practically pay for itself? Once installed, solar panels quietly go to work every day — turning sunlight into savings and reducing your dependence on the grid.</p>
+        <p style="margin:.6rem 0; font-style:italic; color:var(--green-dark);">The earth gives us everything. Solar is one way we give a little back — while keeping more in our pockets.</p>
+        <a class="ad-cta" style="margin-top:1rem;">Calculate Your Savings →</a>
       </div>
     </div>
 
@@ -621,28 +714,7 @@ footer a:hover { color: white; }
       </div>
       <div class="blog-card-body">
         <p class="blog-card-excerpt">Sustainability has become one of the most powerful marketing terms today. As brands increasingly claim to be "eco-friendly," greenwashing has become a growing concern — even flagged by United Nations bodies. This article gives readers practical tools to separate genuine sustainability from clever branding.</p>
-        <div class="blog-article-sections">
-          <div class="blog-section">
-            <h4>Look for Specific, Verifiable Details</h4>
-            <p>Vague language is a red flag. Truly sustainable brands go beyond slogans — they share exact materials, sourcing origins, carbon reduction targets, and waste management initiatives. Specificity signals accountability.</p>
-          </div>
-          <div class="blog-section">
-            <h4>Check for Recognized Certifications</h4>
-            <p>Third-party verification (FSC, Fair Trade, GOTS, USDA Organic, Energy Star) provides assurance that self-declared claims alone cannot. Legitimate brands make their certifications easy to verify.</p>
-          </div>
-          <div class="blog-section">
-            <h4>Evaluate Brand Transparency</h4>
-            <p>Does the brand publish sustainability reports? Do they set measurable goals and acknowledge challenges openly? Real accountability means admitting imperfection — not projecting perfection.</p>
-          </div>
-          <div class="blog-section">
-            <h4>Be Careful with Buzzwords</h4>
-            <p>"Biodegradable," "natural," and "non-toxic" sound reassuring but mean little without context. Biodegradable products may still end up in landfills without industrial composting facilities.</p>
-          </div>
-          <div class="blog-section">
-            <h4>Consider the Full Lifecycle</h4>
-            <p>Citing principles from the Ellen MacArthur Foundation's circular economy model — a durable product lasting years often has a lower environmental footprint than a cheaper "eco" alternative replaced repeatedly.</p>
-          </div>
-        </div>
+        <p class="blog-card-excerpt" style="margin-top:.75rem;">Topics covered: verifiable brand claims, third-party certifications, transparency red flags, buzzword pitfalls, and full product lifecycle thinking.</p>
         <div class="blog-card-meta" style="margin-top:1rem;">
           <span>📅 March 2026</span>
           <span>🌿 Sustainability · Consumer Guide</span>
@@ -658,28 +730,7 @@ footer a:hover { color: white; }
       </div>
       <div class="blog-card-body">
         <p class="blog-card-excerpt">Fast fashion has made clothing affordable and endlessly available — but at a serious environmental cost. The UN Environment Programme reports the fashion industry contributes roughly 10% of global carbon emissions. This article explores what sustainable fashion actually means and why it matters.</p>
-        <div class="blog-article-sections">
-          <div class="blog-section">
-            <h4>The Real Cost of Fast Fashion</h4>
-            <p>Many garments are worn only a few times before being discarded. Multiply individual buying habits across millions of consumers, and the scale of textile waste becomes almost hard to visualize.</p>
-          </div>
-          <div class="blog-section">
-            <h4>What Makes Fashion Sustainable?</h4>
-            <p>Organic cotton, hemp, bamboo fibers, and recycled textiles are gaining ground. Organic cotton avoids synthetic pesticides, while recycled polyester repurposes plastic bottles — though both carry trade-offs worth examining honestly.</p>
-          </div>
-          <div class="blog-section">
-            <h4>The Microplastics Problem</h4>
-            <p>The IUCN identifies synthetic textiles as a significant contributor to microplastic pollution. These particles pass through wastewater filters and enter rivers and oceans, harming marine life and potentially human health.</p>
-          </div>
-          <div class="blog-section">
-            <h4>The Human Side of the Supply Chain</h4>
-            <p>Garment workers' rights matter too. Brands genuinely committed to sustainability tend to be transparent about their supply chain — those that aren't often keep things deliberately vague.</p>
-          </div>
-          <div class="blog-section">
-            <h4>Why Consumers Are Choosing Eco-Friendly Products</h4>
-            <p>Quality clothing lasts longer and can cost less over time, even at a higher upfront price. Consumer choices create incentives — when buyers reward transparency, brands have stronger reasons to improve.</p>
-          </div>
-        </div>
+        <p class="blog-card-excerpt" style="margin-top:.75rem;">Topics covered: the real cost of fast fashion, sustainable materials, microplastics, supply chain transparency, and why consumer choices drive change.</p>
         <div class="blog-card-meta" style="margin-top:1rem;">
           <span>📅 March 2026</span>
           <span>🌿 Fashion · Environmental Impact</span>
@@ -696,6 +747,53 @@ footer a:hover { color: white; }
     </a>
   </div>
 
+</section>
+
+<!-- WHY WORK WITH ME -->
+<section class="sec sec-alt" id="why">
+  <div class="sec-center">
+    <p class="sec-eyebrow">Why Work With Me</p>
+    <h2 class="sec-title">What You Can Expect</h2>
+    <p class="sec-desc">I focus on clarity, structure, and consistency — delivering work that helps businesses communicate better and operate smoother.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <div>
+        <h4>Science-Backed Environmental Writing</h4>
+        <p>I don't just write about sustainability — I studied it. My Environmental Science degree means the content I produce is accurate, credible, and resonates with eco-conscious audiences.</p>
+      </div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      </div>
+      <div>
+        <h4>Detail-Oriented & Organized</h4>
+        <p>Whether it's a paragraph of copy or a set of financial records, I treat every task with the same careful attention to detail. Nothing slips through the cracks.</p>
+      </div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div>
+        <h4>Reliable & Responsive</h4>
+        <p>I respect deadlines and keep communication clear. You'll always know where things stand, and I respond within 24 hours.</p>
+      </div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <div>
+        <h4>Fast Learner, Broad Skill Set</h4>
+        <p>From ad copy to accounting, I bring a versatile combination of skills that most freelancers don't. One person who can write your content <em>and</em> organize your books.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- CTA -->
